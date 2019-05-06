@@ -2,3 +2,6 @@ node_modules
 allure-report
 allure-results
 .git
+.idea
+wdio.conf_old.js
+test_old.js
