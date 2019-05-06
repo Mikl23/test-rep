@@ -1,0 +1,38 @@
+{
+  "name": "qa_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev_smoke": "npm run clean && wdio dev.smoke.conf.js",
+    "dev_reg": "npm run clean && wdio dev.reg.conf.js",
+    "prod_reg": "wnpm run clean && dio prod.conf.js",
+    "dev_smoke_plus_report": "npm run clean && wdio dev.smoke.conf.js && npm run report",
+    "dev_reg_plus_report": "npm run clean && wdio dev.reg.conf.js && npm run report",
+    "prod_reg_plus_report": "wnpm run clean && dio prod.conf.js && npm run report",
+    "clean": "rm -rf allure-results",
+    "report": "allure generate --clean && allure open"
+  },
+  "author": "Mikhail Berezin",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "@wdio/cli": "^5.7.14",
+    "allure-commandline": "^2.9.0",
+    "chai": "^4.2.0",
+    "webdriverio": "^5.7.14"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^5.7.11",
+    "@wdio/dot-reporter": "^5.7.8",
+    "@wdio/local-runner": "^5.7.15",
+    "@wdio/mocha-framework": "^5.7.14",
+    "@wdio/selenium-standalone-service": "^5.7.8",
+    "@wdio/spec-reporter": "^5.7.13",
+    "@wdio/sync": "^5.7.13",
+    "@wdio/testingbot-service": "^5.7.9"
+  }
+}
